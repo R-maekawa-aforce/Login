@@ -30,6 +30,18 @@ public class UserDAO extends DAO{
 
 		return u;
 	}
+	public int insert(String id, String pass) throws Exception {
+		Connection con = getConnection();
 
+		PreparedStatement st = con.prepareStatement("insert into login values(?, ?)");
+		st.setString(1, id);
+		st.setString(2, pass);
+		int line = st.executeUpdate();
+
+		st.close();
+		con.close();
+		return line;
+
+	}
 
 }

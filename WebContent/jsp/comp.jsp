@@ -4,14 +4,10 @@
 <link href="../design.css" media="all" rel="stylesheet">
 
 <section>
-<p>ようこそ、${user.id}さん！</p>
+<p>${user.id}</p>
+<p>上記のIDで登録が完了いたしました。</p>
+
+<p><a href = "../jsp/login.jsp">ログイン画面へ</a></p>
 </section>
-
-
-<form action = "../jp.co.aforce.servlets/logout" method = "post">
-<input type = "submit" value = "ログアウト">
-</form>
-
-<p><a href = "../jsp/other.jsp" >別ページ</a></p>
 
 <%@include file = "../footer.html" %>
